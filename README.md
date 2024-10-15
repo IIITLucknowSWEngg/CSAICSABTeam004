@@ -1,124 +1,155 @@
-# 🏨 CSAICSBTeam004 - Amazon Prime Video Clone 🏨
+**Software Requirements Specification (SRS)** for the Amazon Prime Video clone:
+---
 
-**Team:  InnovateX**
+# **Software Requirements Specification (SRS) for Amazon Prime Video Clone**
+
+## **1. Introduction**
+
+### **1.1 Purpose**
+This SRS document outlines the functional and non-functional requirements for the Amazon Prime Video clone, guiding developers and stakeholders through the project lifecycle.
+
+### **1.2 Scope**
+The platform will allow users to stream video content (movies, TV shows, Amazon Originals) on web and mobile devices. Key features include user management, content playback, subscription handling, and personalized recommendations.
+
+### **1.3 Definitions, Acronyms, and Abbreviations**
+- **SRS:** Software Requirements Specification  
+- **NFR:** Non-Functional Requirement  
+- **API:** Application Programming Interface  
+- **AWS:** Amazon Web Services  
+
+### **1.4 References**
+- IEEE Std 830-1998 for SRS  
+- SWEBOK v3.0  
+- Amazon Prime User Requirements Document  
 
 ---
 
-![Contributors](https://img.shields.io/github/contributors/IIITLucknowSWEngg/CSAICSBTeam004)
-![Forks](https://img.shields.io/github/forks/IIITLucknowSWEngg/CSAICSBTeam004?style=social)
-![Stargazers](https://img.shields.io/github/stars/IIITLucknowSWEngg/CSAICSBTeam004?style=social)
-![Issues](https://img.shields.io/github/issues/IIITLucknowSWEngg/CSAICSBTeam004)
-![MIT License](https://img.shields.io/github/license/IIITLucknowSWEngg/CSAICSBTeam004)
+## **2. Overall Description**
+
+### **2.1 Product Perspective**
+The application will leverage Amazon’s ecosystem (AWS, Amazon Pay, X-Ray, Alexa). It will use a modular architecture for scalability and will integrate with third-party APIs for content delivery and payments.
+
+### **2.2 Product Functions**
+- User registration and secure login  
+- Browsing and search functionality  
+- High-quality video streaming with playback controls  
+- Subscription management with integration to Amazon Pay  
+- Personalized content recommendations  
+- Parental controls for age-restricted content  
+- Ratings and reviews from users  
+
+### **2.3 User Classes and Characteristics**
+- **Viewers:** Stream and manage content.  
+- **Prime Subscribers:** Additional benefits like free shipping and exclusive content.  
+- **Content Providers:** Upload and manage content.  
+- **Admins:** Oversee platform operations.  
+
+### **2.4 Operating Environment**
+Web browsers (Chrome, Safari) and mobile platforms (iOS, Android). The backend will use AWS cloud infrastructure.
+
+### **2.5 Design and Implementation Constraints**
+- DRM for content protection  
+- Performance limitations based on user device/internet speed  
+- Dependency on AWS for scalability and third-party APIs for content delivery  
+
+### **2.6 Assumptions and Dependencies**
+- Stable internet connection  
+- Integration with AWS, Amazon Pay, and third-party services is reliable  
 
 ---
 
-## 🧭 Table of Contents
+## **3. System Features**
 
-- [📌 Project Overview](#-project-overview)
-- [👥 Team Members](#-team-members)
-- [💡 Team Idea](#-team-idea)
-- [🛠️ Languages and Tools](#%EF%B8%8F-languages-and-tools)
-- [👥 Contributors](#-contributors)
-- [🤝 Contributing](#-contributing)
-- [📞 Contact Us](#-contact-us)
-- [🎉 Acknowledgments](#-acknowledgments)
+### **3.1 User Registration and Authentication**
+- Users can register using Amazon accounts or email.  
+- Password recovery via email or SMS.  
+- Two-factor authentication for added security.  
 
----
+### **3.2 Content Browsing and Search**
+- Search by genre, title, or actor.  
+- Filter content by release year or popularity.  
+- Display content with ratings, descriptions, and thumbnails.  
 
-## 📌 Project Overview
- 
-Our project focuses on developing a technology-driven platform that offers:
+### **3.3 Video Playback**
+- Support for play, pause, and fast-forward functions.  
+- Adaptive streaming based on internet speed.  
+- Resume playback from where the user left off.  
 
-- **User Registration and Authentication**
-- **Content Library Listings (Movies, TV Shows, etc.)**
-- **Real-Time Availability and Streaming Quality Updates**
-- **Subscription and Payment Integration**
-- **User Reviews and Ratings**
-- **Content Management Interface for Partners**
-- **Exclusive Discounts and Offers for Premium Members**
-- 
-This project aims to create a seamless experience for both users and content providers, enhancing entertainment services by providing real-time features similar to Amazon Prime Video.
----
+### **3.4 Subscription Management**
+- Manage subscription plans via Amazon Pay.  
+- Upgrade/downgrade plans with prorated billing.  
 
-## 👥 Team Members
+### **3.5 Personalized Recommendations**
+- Use user preferences and Amazon’s recommendation engine to suggest content.  
+- Display recommended shows and movies on the homepage.  
 
-| **Name**            | **Department** | **Roll Number** | **Email**                          | **GitHub Username**                |
-|---------------------|----------------|-----------------|------------------------------------|------------------------------------|
-| **Ashwini Kumar Singh**     | CSAI             | LCI2023037     | lci2023037@iiitl.ac.in        | [ashwinisingh17](https://github.com/ashwinisingh17) |
-| **Adarsh Verma**    | CSB             | LCB2023055     | vermagroup44@gmail.com           | [adarshverma27](https://github.com/adarshverma27)   |
-| **Pratush Shyam Gupt**     | CSAI            | LCI2023039      |  pratushgupt22@gmail.com         | [psg-19](https://github.com/psg-19) |
-| **Veda akash yendluri vedaakash**    | CSAI             |  LCI2023057        |  lci2023037@iiitl.ac.in         | [Vedaakash](https://github.com/Vedaakash) |
-| **Atul Gond**    | CSB            | LCb2023033      |   gondatul304@gmail.com       | [atulgond](https://github.com/atulgond) |
-| **Aman Choudhary**    | CSAI             | LCI2023029      | amankumarchoudhary301@gmail.com       | [amanchoudhary17](https://github.com/amanchoudhary17) |
+### **3.6 Parental Controls**
+- Restrict content based on user-defined age settings.  
+- Enable/disable parental controls on child profiles.  
+
+### **3.7 User Ratings and Reviews**
+- Users can rate content and write reviews.  
+- Average ratings are displayed on content pages.  
 
 ---
 
-## 💡 Team Idea
- 
-Our project aims to build a technology-driven platform for streaming and managing digital content, inspired by Amazon Prime Video. Key goals include:
+## **4. External Interface Requirements**
 
-- **Efficient content library management** for streaming partners.
-- **Real-time updates** for content availability and streaming quality.
-- **Streamlined subscription** and user feedback integration.
+### **4.1 User Interfaces**
+- Responsive web interface and touch-optimized mobile app.  
+- Support for Alexa voice commands for hands-free interaction.  
 
-An intuitive content management interface for seamless content administration.
+### **4.2 Hardware Interfaces**
+- Interact with device hardware for playback and offline storage.
 
----
+### **4.3 Software Interfaces**
+- AWS for cloud services and storage.  
+- Amazon Pay for subscription management.  
 
-## 🛠️ Languages and Tools
-
-We are using a combination of modern technologies to develop a scalable and user-friendly platform:
-
-![JavaScript](https://img.shields.io/badge/JavaScript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
-![React](https://img.shields.io/badge/React-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-![MongoDB](https://img.shields.io/badge/MongoDB-%2347A248.svg?style=for-the-badge&logo=mongodb&logoColor=white)
-
-These tools empower us to develop features such as real-time updates, efficient database management, and responsive UI components.
+### **4.4 Communication Interfaces**
+- Secure HTTPS for data transfer.  
+- WebSocket for real-time updates.
 
 ---
 
-## 👥 Contributors
+## **5. Non-Functional Requirements (NFRs)**
 
-Thanks to these wonderful people for their contributions ✨:
+### **5.1 Performance Requirements**
+- Load time under 2 seconds.  
+- Support for 100,000 concurrent users.  
 
-<a href="https://github.com/IIITLucknowSWEngg/CSAICSBTeam004/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=IIITLucknowSWEngg/CSAICSBTeam004" />
-</a>
+### **5.2 Security Requirements**
+- Data encrypted using TLS and AES-256.  
+- Regular security audits and penetration testing.  
 
----
+### **5.3 Availability and Reliability**
+- 99.9% uptime using AWS infrastructure for redundancy.  
 
-## 🤝 Contributing
+### **5.4 Scalability**
+- Support for horizontal scaling to handle increased loads.
 
-We welcome contributions from everyone! Here’s how you can help:
+### **5.5 Usability**
+- Follow WCAG 2.1 accessibility guidelines.  
+- Integrate user feedback for continual UI improvement.
 
-1. **Fork** the repository.
-2. **Create a branch** (`git checkout -b feature/AmazingFeature`).
-3. **Commit your changes** (`git commit -m 'Add some AmazingFeature'`).
-4. **Push to the branch** (`git push origin feature/AmazingFeature`).
-5. **Open a Pull Request**.
+### **5.6 Maintainability**
+- Modular code structure for easy updates.  
+- Automated testing to avoid regressions.
 
-Make sure to update any relevant tests. Contributions of all types are appreciated!
-
----
-
-## 📞 Contact Us
-
-Feel free to reach out to any of the team members for collaboration, ideas, or queries:
-
--  Ashwini Kumar Singh: lci2023037@iiitl.ac.in 
-- Adarsh Verma: vermagroup44@gmail.com    
-- Pratush Shyam Gupt: pratushgupt22@gmail.com
-- Veda akash yendluri vedaakash:  lci2023037@iiitl.ac.in
--  Atul Gond: gondatul304@gmail.com 
--  Aman Choudhary:  amankumarchoudhary301@gmail.com
+### **5.7 Compliance**
+- GDPR and CCPA compliance.  
+- PCI-DSS for secure payment processing.
 
 ---
 
-## 🎉 Acknowledgments
-
-We would like to extend our gratitude to our professor, **Vinaya Sathyanarayana**, mentors, and the open-source community for their guidance, inspiration, and support throughout this project.
+## **6. Other Requirements**
+- **Localization:** Support for multiple languages and region-specific content.  
+- **Ethical Requirements:** Reporting mechanisms for inappropriate content.
 
 ---
 
-*Crafted with passion by InnovateX*
+### **Key Modifications:**
+- Streamlined sections while retaining key functionality.  
+- Focused more on concise, relevant requirements with minimal overlap.
+
+This shorter version retains all necessary elements but is more succinct to meet your needs. Let me know if it works or needs further adjustments!
