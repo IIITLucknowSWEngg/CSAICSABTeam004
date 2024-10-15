@@ -47,3 +47,37 @@
   - Ensure the app complies with data privacy regulations such as GDPR and CCPA.
   - Oversee the licensing agreements for content available in different regions to avoid legal conflicts.
 - **Impact:** Medium – Ensures that the app operates within the legal framework, avoiding any penalties or user trust issues.
+## 8. Marketing and Growth Team
+- **Role:** Promotes the Amazon Prime Video clone, with the goal of driving user acquisition, increasing subscriptions, and boosting engagement.
+- **Responsibilities:**
+  - Develop and execute marketing campaigns across social media, email, and digital platforms.
+  - Utilize user data to improve marketing strategies, targeting potential users based on preferences and behavior.
+  - Collaborate with external agencies for ad placements, influencer marketing, and content promotion.
+- **Impact:** Medium – The marketing team’s efforts help grow the user base and ensure that the app gains visibility in a competitive market.
+## 9. UI/UX Designers
+- **Role:** Ensure that the Amazon Prime Video clone is user-friendly, visually appealing, and accessible across all devices.
+- **Responsibilities:**
+  - Design intuitive and responsive interfaces for mobile, web, and smart TVs.
+  - Create a seamless experience for browsing, watching, and managing content.
+  - Ensure the app follows best practices in UI/UX design, with a focus on accessibility.
+- **Impact:** Medium – A well-designed interface significantly impacts user satisfaction and retention, encouraging long-term use of the app.
+## 10. Quality Assurance (QA) Team
+- **Role:** Ensures that the Amazon Prime Video clone is thoroughly tested and free of critical bugs before release.
+- **Responsibilities:**
+  - Perform manual and automated testing to identify bugs, performance issues, and compatibility problems across various devices.
+  - Ensure all features, including video playback, payment integration, and user management, function as intended.
+  - Conduct stress testing to ensure the app can handle large numbers of concurrent users.
+- **Impact:** High – A rigorous QA process is essential to ensuring a stable and bug-free application at launch.
+## 11. External Partners
+- **Role:** Third-party service providers such as content delivery networks (CDNs), payment gateways (Amazon Pay), and external streaming services.
+- **Responsibilities:**
+  - Ensure seamless integration with payment processing and content delivery services.
+  - Provide support for any service-related issues and updates to maintain app performance.
+- **Impact:** Low to Medium – While external partners are not deeply involved in the project’s development, they are critical in ensuring certain app functionalities (e.g., secure payments, fast content delivery).
+## 12. Content Licensing and Providers
+- **Role:** Includes movie studios, TV networks, and independent content creators who supply content for the platform.
+- **Responsibilities:**
+  - Provide high-quality content for streaming, available through licensing agreements.
+  - Collaborate with the Prime Video team to promote exclusive shows or movies.
+  - Manage region-specific content based on licensing terms.
+- **Impact:** Medium – Without engaging content, the app cannot attract or retain users, making content providers a key element in the platform's success.
