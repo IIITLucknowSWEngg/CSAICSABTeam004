@@ -89,3 +89,37 @@ Users can filter content by genre, release year, and rating.
 - Notifications for new content will be sent based on user preferences.
 - Users can customize notifications (e.g., new releases, upcoming expirations).
 - Notifications will remind users of subscription renewals or promotions.
+
+## 4. Non-Functional Requirements
+### 4.1 Performance
+- Load times for content categories and homepage should not exceed 2 seconds.
+- Streaming should start within 3-5 seconds, with minimal buffering.
+- The system should support up to 100,000 concurrent users.
+### 4.2 Security
+- User data, including payment information, will be encrypted with AES-256 and transmitted over HTTPS.
+- The system will enforce secure password policies, with support for multi-factor authentication (2FA).
+### 4.3 Usability
+- The interface will be intuitive and responsive across various devices, including smartphones, tablets, smart TVs, and web browsers.
+- Accessibility features such as screen readers and contrast adjustments will be supported.
+### 4.4 Scalability
+- The system will be designed for horizontal scaling, utilizing AWS for scalability during peak loads or high traffic events.
+### 4.5 Reliability and Availability
+- The application will maintain 99.9% uptime, with AWS providing redundancy and automatic failover.
+- Daily data backups and geographically distributed storage will be used for recovery.
+### 4.6 Maintainability
+- Modular architecture will allow for easy updates and new feature integration.
+- Automated testing and monitoring will ensure that updates do not introduce bugs or regressions.
+### 4.7 Compatibility
+- The application will be compatible with Android, iOS, Windows, macOS, and web browsers such as Chrome, Firefox, Safari, and Edge.
+### 4.8 Localization
+- The system will support multiple languages, with region-specific content availability based on user location.
+### 5. Assumptions and Dependencies
+- The system assumes users have access to stable internet with sufficient bandwidth for HD/UHD streaming.
+- Integration with Amazon Pay, AWS, and third-party APIs for content delivery will be stable and reliable.
+- The app will support standard video codecs and streaming protocols.
+### 6. Acceptance Criteria
+- The app will pass all functional and non-functional tests outlined in this document.
+- User feedback during beta testing will be addressed before final release.
+- The system will meet security and performance benchmarks, including 99.9% uptime and GDPR/CCPA compliance.
+### 7. Conclusion
+This User Requirements Document (URD) outlines the key features and requirements for the Amazon Prime Video clone. By addressing both functional and non-functional requirements, this document ensures that the final product is user-friendly, secure, scalable, and meets modern streaming standards.
