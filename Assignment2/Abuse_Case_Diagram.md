@@ -1,1 +1,63 @@
- https://www.plantuml.com/plantuml/png/VPJHSjii48NlzHGxllh_2q_Ve1F7ZYUPIJfkrNHwkvKs5h446bYIDazVX970uEcTEUTR0Ri7tnX6pNRegvvU65Y15iUEeHMQ6XPALYou9zWC-A4a7BGO27w8bXIiOVFB6e8j6eATmAF6eQgmOQLXmupDYNHOxZNQrlOa-TcG1ZImYX9CsYgGjug_4ByhVVAKMq9OpyGJzg8HofeTlL6lnl2zHOP5NrMLDTHCnrlLNn_XGRwUxxIQAfoo297RQcNCkXPCK3TQZ2pa4VxxMTV_-oBt8xA7JfZE-TwP5z7U8IFSQiAcc_f1myYUdFIpNANxKakI1VPGTwYdNNrtVKKqWnVhDasZh6Iu5w-kuVDXWhg8oJvACZd-83GsVpmSfBCIoJsU2BxHcw1ty-bE7l58WyDyoUH5gKgEOraDoDHw1FvPvcPhaW4r6aTtr12k9s9iaT7NpTuibjVPzqgry-s3E6lfyGuFSFTxx9LWN8BWn5IBzBD4ovtIueDQc7UwLuRdZL8WwB5w2HUebnXQzvtM3pLAavASyRksXk5H6UCnlvnMaN138MafCa5Og1Y_hHf6hGPXQ8bUbAfgVgQmNd--V12furEV2Z7igNeHxFJ51xjCSGcLoIsPBB0bKCGp_gcKjezXHXI1o_moOUMVakVoQ5t7hkReEfgd9fsPzsDStD0o9Sx76raOYl5uA8rMFfliynTZAOelcvwLbXF9W7mWrowGDViQKZQwlEKDoTOE_Ly0
+![dia](https://github.com/user-attachments/assets/b699309e-206f-4a70-b8e8-ea0f630b02ff)
+@startuml
+left to right direction
+title Amazon Prime Video - Abuse Case Diagram
+
+actor Attacker
+actor FraudulentUser as "Fraudulent User"
+actor BotNetwork as "Bot Network"
+actor MaliciousDeveloper as "Malicious Developer"
+
+usecase "SQL Injection" as SQLInjection
+usecase "Cross-Site Scripting (XSS)" as XSS
+usecase "Phishing" as Phishing
+usecase "Data Breach Attempt" as DataBreach
+
+usecase "Credential Sharing Abuse" as CredentialSharing
+usecase "Account Hijacking" as AccountHijacking
+usecase "Content Piracy" as ContentPiracy
+usecase "Fake Reviews/Engagement" as FakeEngagement
+
+usecase "Automated Fake Engagement" as FakeEngagementBots
+usecase "Scraping Video Metadata" as ScrapingMetadata
+usecase "Content Flooding" as ContentFlooding
+
+usecase "API Exploitation" as APIExploitation
+usecase "Unauthorized Content Hosting" as UnauthorizedHosting
+usecase "Injection of Malicious Code" as MaliciousCode
+
+usecase "Trust Loss" as TrustLoss
+usecase "Revenue Loss" as RevenueLoss
+usecase "Data Compromise" as DataCompromise
+
+Attacker --> SQLInjection
+Attacker --> XSS
+Attacker --> Phishing
+Attacker --> DataBreach
+
+FraudulentUser --> CredentialSharing
+FraudulentUser --> AccountHijacking
+FraudulentUser --> ContentPiracy
+FraudulentUser --> FakeEngagement
+
+BotNetwork --> FakeEngagementBots
+BotNetwork --> ScrapingMetadata
+BotNetwork --> ContentFlooding
+
+MaliciousDeveloper --> APIExploitation
+MaliciousDeveloper --> UnauthorizedHosting
+MaliciousDeveloper --> MaliciousCode
+
+SQLInjection --> TrustLoss
+XSS --> TrustLoss
+DataBreach --> DataCompromise
+CredentialSharing --> RevenueLoss
+AccountHijacking --> TrustLoss
+ContentPiracy --> RevenueLoss
+FakeEngagement --> TrustLoss
+FakeEngagementBots --> TrustLoss
+ScrapingMetadata --> DataCompromise
+APIExploitation --> DataCompromise
+UnauthorizedHosting --> RevenueLoss
+
+@enduml
