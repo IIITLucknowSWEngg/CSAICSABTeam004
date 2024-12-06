@@ -212,4 +212,77 @@ AS --> UDB : "Fetches user data"
 
 ```
 
+# 4. DeployMent Diagram 
+
+ 
+![ DeployMent Diagram](<https://github.com/IIITLucknowSWEngg/CSAICSBTeam004/blob/main/Assets/deplyoment%20diagram1.png>)
+
+```
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Deployment.puml
+
+LAYOUT_WITH_LEGEND()
+title Deployment Diagram - Amazon Video Clone
+
+Deployment_Node(client, "Client Tier", "User Devices") {
+    Deployment_Node(browser, "Web Browser") {
+        Container(web, "Web App", "React", "Single Page Application for content streaming and account management")
+    }
+    Deployment_Node(mobile, "Mobile Device") {
+        Container(app, "Mobile App", "React Native", "Supports offline downloads and adaptive streaming")
+    }
+}
+
+Deployment_Node(api, "API Tier", "AWS ECS/Kubernetes") {
+    Deployment_Node(api_cluster, "API Cluster", "Load Balanced") {
+        Container(api_gateway, "API Gateway", "Express.js", "Handles all incoming requests with validation and rate limiting")
+        Container(service, "Backend Service", "Node.js", "Manages user accounts, subscriptions, and video catalog")
+        Container(auth_service, "Authentication Service", "OAuth2/OpenID", "Handles login, token management, and secure sessions")
+    }
+    Deployment_Node(streaming, "Streaming Service", "AWS Media Services") {
+        Container(stream_server, "Streaming Server", "HLS/DASH", "Provides adaptive bitrate streaming for video playback")
+    }
+}
+
+Deployment_Node(data, "Data Tier", "AWS RDS/S3/DynamoDB") {
+    Deployment_Node(databases, "Database Cluster") {
+        ContainerDb(user_db, "User Database", "Amazon RDS", "Stores user information and subscriptions")
+        ContainerDb(metadata_db, "Content Metadata", "DynamoDB", "Stores video metadata and catalog details")
+    }
+}
+
+Deployment_Node(storage, "Storage Tier", "Global") {
+    Deployment_Node(object_storage, "Object Storage") {
+        Container(video_store, "Video Storage", "Amazon S3", "Stores video files and static assets like thumbnails")
+    }
+    Deployment_Node(cdn_nodes, "CDN Nodes") {
+        Container(cdn, "CDN", "AWS CloudFront", "Delivers video content globally with low latency")
+    }
+}
+
+Deployment_Node(monitoring, "Monitoring and Security") {
+    Container(logging, "Logging", "AWS CloudWatch", "Captures request and error logs for analysis")
+    Container(metrics, "Metrics", "Prometheus/Grafana", "Monitors performance and usage trends")
+    Container(security, "Web Application Firewall (WAF)", "AWS WAF", "Blocks malicious traffic and protects APIs")
+}
+
+Rel(web, api_gateway, "Sends requests", "HTTPS")
+Rel(app, api_gateway, "Sends requests", "HTTPS")
+Rel(api_gateway, auth_service, "Authenticates users", "OAuth2")
+Rel(api_gateway, service, "Routes to", "REST")
+Rel(service, user_db, "Reads/Writes", "SQL")
+Rel(service, metadata_db, "Reads/Writes", "DynamoDB")
+Rel(stream_server, video_store, "Streams video files", "S3 API")
+Rel(video_store, cdn, "Serves to", "HTTPS")
+Rel(web, cdn, "Streams video", "HTTPS")
+Rel(app, cdn, "Streams video", "HTTPS")
+
+' Error Handling Relationships
+Rel(api_gateway, logging, "Logs errors and invalid requests", "HTTPS")
+Rel(api_gateway, security, "Protects against request floods and large headers", "WAF Rules")
+Rel(service, logging, "Logs backend errors and bad requests", "HTTPS")
+@enduml
+```
+
+
 
