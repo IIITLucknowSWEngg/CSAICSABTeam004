@@ -1,4 +1,4 @@
-# Abuse Case Diagram
+# Error Case Diagram
 
 
 ![Abuse Case Diagram](<https://github.com/IIITLucknowSWEngg/CSAICSBTeam004/blob/main/Assets/error_case_diagram.png>)
