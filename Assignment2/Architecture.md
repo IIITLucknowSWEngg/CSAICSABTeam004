@@ -3,7 +3,7 @@
 
 ![System Context Diagram](<https://github.com/IIITLucknowSWEngg/CSAICSBTeam004/blob/main/Assets/system_ctxt_dia.png>)
 
-
+```
 @startuml
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
 
@@ -44,12 +44,12 @@ Rel(primeVideoClone, email, "Sends notifications", "SMTP")
 Rel(primeVideoClone, moderation, "Ensures content compliance", "API")
 Rel(primeVideoClone, payment, "Processes payments", "API")
 @enduml
-
+```
 
 # 2. Container Diagram
 ![Customer Features component](<https://github.com/IIITLucknowSWEngg/CSAICSBTeam004/blob/main/Assets/container_dia.png>)
 
-
+```
 @startuml
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
 
@@ -123,7 +123,7 @@ Rel(subscriptionService, subscriptionDB, "Manages subscription data", "PostgreSQ
 Rel(analyticsService, analyticsDB, "Stores engagement metrics", "BigQuery")
 Rel(notificationService, messageQueue, "Processes notification events", "AMQP")
 @enduml
-
+```
 # 3. Component Diagram 
 
 ### i) Customer Features
