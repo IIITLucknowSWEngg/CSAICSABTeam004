@@ -1,9 +1,13 @@
+Here’s the updated **Software Design Description (SDD)** for your **Amazon Prime Video Clone** project, with all references to live streaming removed:
+
+---
+
 # Software Design Description (SDD)
 
 ## 1. Introduction
 
 ### 1.1 Purpose
-This document outlines the comprehensive design for an **Amazon Prime Video Clone**, which will serve as a streaming platform offering on-demand video content, live events, and exclusive Amazon Originals. The primary objective is to deliver a highly scalable, feature-rich application with seamless user experiences on web and mobile platforms. This SDD provides the architectural blueprint, module details, data flow, and interaction designs essential for implementation. 
+This document outlines the comprehensive design for an **Amazon Prime Video Clone**, which will serve as a streaming platform offering on-demand video content and exclusive Amazon Originals. The primary objective is to deliver a highly scalable, feature-rich application with seamless user experiences on web and mobile platforms. This SDD provides the architectural blueprint, module details, data flow, and interaction designs essential for implementation.
 
 ### 1.2 Objectives
 The Amazon Prime Video Clone system is designed to:
@@ -22,7 +26,6 @@ The Amazon Prime Video Clone system is designed to:
 |--------------------------|-------------------------------------------------------------------------|
 | **Prime Membership**      | Subscription tiers for monthly, annual, or trial-based access.         |
 | **Multi-Device Access**   | Sync profiles and watch history across devices.                        |
-| **Live Streaming**        | Streaming live events like sports, concerts, and award shows.          |
 | **Personalized Watchlists** | Users can save content to their watchlists for future viewing.        |
 | **Recommendation Engine** | Suggests movies and shows based on user behavior and preferences.      |
 | **Content Downloads**     | Offline downloads for selected titles, accessible across devices.      |
@@ -104,20 +107,15 @@ Functions:
 - Real-time suggestions based on user watch history and ratings.
 - Highlights Amazon Originals and trending titles.
 
-#### 4.2.4 Live Streaming Service
-Features:
-- Scheduling live events and managing concurrent streams.
-- Notifications for upcoming live streams.
-
-#### 4.2.5 Subscription Service
+#### 4.2.4 Subscription Service
 Manages:
 - Multiple tiers (Basic, Standard, Premium).
 - Auto-renewals and cancellations through payment gateways.
 
-#### 4.2.6 Notification Service
+#### 4.2.5 Notification Service
 Functions:
 - Email and push notifications for new releases, deals, and reminders.
-- Alerts for expiring memberships and upcoming live streams.
+- Alerts for expiring memberships.
 
 ---
 
@@ -192,7 +190,6 @@ Functions:
 
 ---
 
-
 ## Streaming Data
 | Field            | Type           | Description                             |
 |------------------|----------------|-----------------------------------------|
@@ -210,7 +207,7 @@ Functions:
 - *Subscriptions*: Stores subscription plans and user billing information.
 - *Viewing History*: Tracks user watch progress and preferences.
 ...
-  
+
 ## 6. API Design
 
 ### 6.1 Authentication APIs
@@ -224,7 +221,9 @@ Functions:
 
 ### 6.2 Content APIs
 | Endpoint                | Method | Description                              |
-|-------------------------|--------|------------------------------------------|
+|-------------------------|--------|--------------------------------
+
+----------|
 | /api/content            | GET    | Fetches content metadata.               |
 | /api/content/{id}       | GET    | Fetches details of a specific content.   |
 
@@ -254,4 +253,7 @@ Functions:
 ---
 
 ## 8. Conclusion
-The Amazon Prime Video Clone is designed as a scalable, secure, and feature-rich platform offering high-quality VOD and live streaming. By leveraging advanced technologies and adhering to global standards, it ensures a premium user experience tailored to diverse audiences worldwide.
+The Amazon Prime Video Clone is designed as a scalable, secure, and feature-rich platform offering high-quality VOD. By leveraging advanced technologies and adhering to global standards, it ensures a premium user experience tailored to diverse audiences worldwide.
+
+---
+ 
