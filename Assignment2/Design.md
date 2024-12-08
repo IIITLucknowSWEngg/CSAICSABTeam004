@@ -220,9 +220,7 @@ Functions:
 
 ### 6.2 Content APIs
 | Endpoint                | Method | Description                              |
-|-------------------------|--------|--------------------------------
-
-----------|
+|-------------------------|--------|------------------------------------------|
 | /api/content            | GET    | Fetches content metadata.               |
 | /api/content/{id}       | GET    | Fetches details of a specific content.   |
 
