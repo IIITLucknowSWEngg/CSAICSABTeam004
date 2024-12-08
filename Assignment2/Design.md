@@ -1,5 +1,4 @@
-Here’s the updated **Software Design Description (SDD)** for your **Amazon Prime Video Clone** project, with all references to live streaming removed:
-
+ 
 ---
 
 # Software Design Description (SDD)
