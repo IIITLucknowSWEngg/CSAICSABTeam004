@@ -38,7 +38,6 @@ The Amazon Prime Video Clone system is designed to:
 | **Backend**          | Node.js, Express.js, Python (ML Services)  |
 | **Database**         | MongoDB, Redis (Caching)                   |
 | **Cloud Hosting**    | AWS (EC2, S3, RDS, CloudFront)             |
-| **Streaming Protocol**| HLS (HTTP Live Streaming)                 |
 | **Payment Gateway**  | Stripe, Razorpay, PayPal                   |
 | **Machine Learning** | TensorFlow, Scikit-learn                   |
 
