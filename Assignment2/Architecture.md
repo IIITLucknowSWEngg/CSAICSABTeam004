@@ -1,4 +1,7 @@
 #   C4 Diagrams
+
+## Reference :- https://www.geeksforgeeks.org/system-design-netflix-a-complete-architecture/
+
 # 1. System Context Diagram
 
 ![System Context Diagram](<https://github.com/IIITLucknowSWEngg/CSAICSBTeam004/blob/main/Assets/system_ctxt_dia.png>)
