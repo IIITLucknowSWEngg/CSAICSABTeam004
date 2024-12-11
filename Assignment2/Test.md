@@ -1,5 +1,4 @@
-Here’s a **Test.md** for your **Amazon Prime Video Clone** project, covering key features and their associated test cases:
-
+ 
 ---
 
 # Test.md  
@@ -306,5 +305,3 @@ describe('Admin User Management', function() {
 ```
 
 ---
-
-This test plan covers the most critical features of your **Amazon Prime Video Clone**, ensuring smooth functionality across user registration, streaming, watchlist management, search, and more.
