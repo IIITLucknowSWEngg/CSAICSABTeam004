@@ -66,8 +66,8 @@ An intuitive content management interface for seamless content administration.
 ---
 
 ## Viva Screen Shots
-![test](<https://github.com/IIITLucknowSWEngg/CSAICSBTeam004/blob/main/viva-screenshot-1.jpg>)
 ![test2](<https://github.com/IIITLucknowSWEngg/CSAICSBTeam004/blob/main/viva-screenshot-2.png>)
+![test](<https://github.com/IIITLucknowSWEngg/CSAICSBTeam004/blob/main/viva-screenshot-1.jpg>)
 ---
 ## 🛠️ Languages and Tools
 
